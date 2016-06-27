@@ -1,3 +1,16 @@
+# ================================FrontEnd==========================================
+require('sinatra')
+# require('sinatra-contrib')
+
+get('/') do
+  erb(:form)
+end
+
+get('/result') do
+  @sentence = params.fetch('sentence').leetspeak
+  erb(:result)
+end
+# ================================BackEnd===========================================
 class String
   define_method(:leetspeak) do
     words_array = self.split()
