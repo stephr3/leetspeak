@@ -4,6 +4,8 @@ class String
     words_array.each_index() do |idx|
       if words_array[idx].==('e') || words_array[idx].==('E')
         words_array[idx] = '3'
+      elsif words_array[idx].==('o') || words_array[idx].==('O')
+        words_array[idx] = '0'
       end
     end
     words_array.join()
