@@ -1,17 +1,21 @@
 class String
   define_method(:leetspeak) do
-    words_array = self.split('')
-    words_array.each_index() do |idx|
-      if words_array[idx].==('e') || words_array[idx].==('E')
-        words_array[idx] = '3'
-      elsif words_array[idx].==('o') || words_array[idx].==('O')
-        words_array[idx] = '0'
-      elsif words_array[idx].==('I')
-        words_array[idx] = '1'
-      elsif idx.!=(0) && (words_array[idx].==('s') || words_array[idx].==('S'))
-        words_array[idx] = 'z'
+    words_array = self.split()
+    words_array.each_index() do |i|
+      letters_array = words_array[i].split('')
+      letters_array.each_index() do |idx|
+        if letters_array[idx].==('e') || letters_array[idx].==('E')
+          letters_array[idx] = '3'
+        elsif letters_array[idx].==('o') || letters_array[idx].==('O')
+          letters_array[idx] = '0'
+        elsif letters_array[idx].==('I')
+          letters_array[idx] = '1'
+        elsif idx.!=(0) && (letters_array[idx].==('s') || letters_array[idx].==('S'))
+          letters_array[idx] = 'z'
+        end
       end
+      words_array[i] = letters_array.join()
     end
-    words_array.join()
+    words_array.join(' ')
   end
 end
