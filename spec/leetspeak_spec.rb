@@ -1,5 +1,5 @@
 require('rspec')
-require('app')
+require('./app')
 
 describe('String#leetspeak') do
   it('returns a string as is when no Leetspeak rules apply') do
