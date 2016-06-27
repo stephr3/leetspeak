@@ -6,6 +6,8 @@ class String
         words_array[idx] = '3'
       elsif words_array[idx].==('o') || words_array[idx].==('O')
         words_array[idx] = '0'
+      elsif words_array[idx].==('I')
+        words_array[idx] = '1'
       end
     end
     words_array.join()
