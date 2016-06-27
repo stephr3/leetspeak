@@ -8,7 +8,7 @@ class String
         words_array[idx] = '0'
       elsif words_array[idx].==('I')
         words_array[idx] = '1'
-      elsif words_array[idx].==('s') || words_array[idx].==('S')
+      elsif idx.!=(0) && (words_array[idx].==('s') || words_array[idx].==('S'))
         words_array[idx] = 'z'
       end
     end
